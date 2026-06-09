@@ -1,0 +1,77 @@
+---
+layout: default
+format: frontpage
+---
+
+<div class="row">
+    <div class="small-12 columns">
+        {{ content }}
+    </div>
+</div>
+
+{% comment %}
+*
+* First check, if there is a call for action-button
+*
+{% endcomment %}
+{% if page.callforaction.url contains 'http' %}
+{% assign url = '' %}
+{% else %}
+{% capture url %}{% endcapture %}
+{% endif %}
+{% if page.callforaction %}
+    <div class="row t30 b30">
+        <div class="small-12 text-center columns">
+            <a class="button large radius {{ page.callforaction.style }}" href="{{ page.callforaction.url }}"{% if page.callforaction.url contains 'http' %} {% endif %}>{{ page.callforaction.text }}</a>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+{% endif %}
+
+
+{% include _widget_grid_layout.html widgets=page.widgets articles_per_row=3 %}
+
+
+{% comment %}
+*
+* First check, if there are any posts at all
+*
+{% endcomment %}
+
+{% unless site.posts == empty %}
+    {% assign primary_posts = site.posts | where: "primary_post", true %}
+    {% assign story_posts = site.posts | where: "story_post", true %}
+
+    <div class="row t30 b20 homepage">
+        <div class="small-12 columns">
+            <p>
+                <a href="https://samudra.world/" target="_blank"><img width="970" src="/images/main-samudra.jpg"></a>
+            </p>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <div class="row t30">
+        <!-- Display primary post -->
+        <div class="medium-6 columns">
+            <!-- {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %} -->
+            <h2 style="margin-top: 0px;"><a href="https://samudra.world/" target="_blank">4. I am on a mission to reduce the negative impact of waste on climate, environment and health.</a></h2>
+            <p>
+                To achieve this I founded <a href="https://samudra.world/" target="_blank">Samudra.world</a>, a systems accelerator. At Samudra we are experimenting with approaches and organisational structures that have not been tried before. Our strategy includes identifying success-relevant stakeholders and working with them to facilitate internal changes and enable powerful coordination between them.
+                <a href="https://samudra.world/"><strong>{{ site.data.language.read_more }}</strong></a>
+            </p>
+            </p>
+        </div>
+
+        <!-- List of earlier pages -->
+        <div class="medium-6 columns">
+            <h3 style="margin-top: 0px;">Recently published:</h3>
+            <ul class="side-nav">
+                {% for post in story_posts limit:7 %}
+                    <li><a href="{{ post.url }}">{{ post.date | date: "%Y-%m-%d" }} &middot; <strong>{{ post.title }}</strong></a></li>
+                {% endfor %}
+                <!-- Link to the archive -->
+                <li class="text-right"><a href="/rubbish-stories/"><strong>{{ site.data.language.to_archive }}</strong></a></li>
+            </ul>
+        </div>
+    </div>
+{% endunless %}
