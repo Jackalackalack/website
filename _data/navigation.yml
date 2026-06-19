@@ -6,18 +6,10 @@
   logo: true
   side: left
 
-- title: "About"
-  url: "/about/"
-  side: left
-
 - title: "Projects"
   url: "/projects/"
   side: left
 
 - title: "Programming"
   url: "/programming/"
-  side: left
-
-- title: "Contact"
-  url: "/contact/"
   side: left

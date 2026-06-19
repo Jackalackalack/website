@@ -1,17 +1,13 @@
 - name: Email
-  url: mailto:hello@karina.io
+  url: mailto:jack@jackabraham.studio
   class: icon-mail
   title: ""
 
 - name: LinkedIn
-  url: https://www.linkedin.com/in/karina-zile/
+  url: https://www.linkedin.com/in/jackcabraham/
   class: icon-linkedin
   title: ""
 
-- name: RSS
-  url: /feed.xml
-  class: icon-rss
-  title: ""
 
 # - name: GitHub
 #   url: https://github.com/KarinaZile

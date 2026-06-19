@@ -6,7 +6,7 @@
 #
 # Resource › http://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html
 karina:
-  name: "Karina"
+  name: "Jack"
   siterole: "developer"
-  uri: https://www.linkedin.com/in/karina-zile/
-  email: hello@karina.io
+  uri: https://www.linkedin.com/in/jackcabraham/
+  email: jack@jackabraham.studio
