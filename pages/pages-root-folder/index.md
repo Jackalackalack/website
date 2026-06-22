@@ -11,7 +11,7 @@ my-widgets:
   title: 
 - url:
   image:
-  title: I am a highly effective coach, mentor and creative producer. I work alongside both artists, strategists (managers, promoters, producers) and venues. My multi-disciplinary background enables me to provide creative and technical solutions for complex projects with many moving parts. 
+  title: I am a highly effective coach, mentor and creative producer. I work in partnership with artists, managers, promoters, producers and venues. My multi-disciplinary background enables me to provide creative and technical solutions for complex projects with many moving parts. 
 
 ---
 

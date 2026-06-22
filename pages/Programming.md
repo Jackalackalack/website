@@ -11,7 +11,7 @@ widgets:
   image:
   title: I am an experienced live event programmer and producer. I have curated music and experiences for a wide range of private, corporate and public events for over 20 years.
 - url: 
-  image: RA Lates Manhattan Swing - Samantha  Milligan (123)  copy.jpg
+  image: RA Lates Manhattan Swing.jpg
   title: 
 - url: 
   image:

@@ -18,19 +18,19 @@ widgets:
   title: 👆Lecturer in Music Industry. Researching pathways for emerging artists.
 - url: 
   image: westminster logo.png
-  title: <a href="/travel/street-art/" target="_self"></a>
+  title: 
 - url: 
   image:
   title: 👆 Waive Project - Exploring ethical and creative applications of AI for live events and artists
 - url: 
   image: ICMP Logo.png
-  title: <a href="/travel/street-art/" target="_self"></a>
+  title: 
 - url: 
   image:
   title: 👆 Visting Lecturer on the Entrepreneurship and Innovation MA. Focus on disruptive technologies and opportunity recognition. 
 - url: 
   image: BIMM LOGO.png
-  title: <a href="/travel/street-art/" target="_self"></a>
+  title: 
 - url: 
   image:
   title: 👆 Senior Lecturer in Technology & Live Events, Fundamentals of Live Production, Touring, Festivals & Logistics
