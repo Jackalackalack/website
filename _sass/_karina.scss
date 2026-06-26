@@ -19,3 +19,65 @@ p {
   width: 50%;
   margin: 20px;
 }
+
+
+// =====================================================
+// Flexbox Mobile Responsive Layout for Widget Grids
+// =====================================================
+//
+// On desktop, Foundation's float grid places widgets in rows of 2 or 3 columns.
+// Each image widget is paired with a description widget in the same column of
+// the next row (indicated by the ☝️ arrows in the page content).
+//
+// On mobile, Foundation stacks all widgets in flat DOM order, which separates
+// each image from its description. The fix below turns widget-grid-row into a
+// flex container and uses CSS `order` to group items by column position, so
+// every image stays adjacent to its corresponding description on mobile.
+//
+@media #{$small-only} {
+
+  // Turn the widget row into a flex column container
+  .widget-grid-row {
+    display: flex;
+    flex-direction: column;
+
+    // The invisible <hr> elements are float-clearfix helpers; flex makes them
+    // unnecessary and they would become empty gaps, so hide them.
+    hr { display: none; }
+  }
+
+  // All widgets take full width on mobile regardless of their medium-N class
+  .widget-grid-row .frontpage-widget {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+  }
+
+  // ---- 3-column grids (articles_per_row=3 → each widget is .medium-4) ----
+  //
+  // Desktop layout (DOM order 1–12 across 3 columns, 4 rows):
+  //   Col 1    Col 2    Col 3
+  //   [  1  ]  [  2  ]  [  3  ]   ← row 1 (typically images)
+  //   [  4  ]  [  5  ]  [  6  ]   ← row 2 (typically descriptions)
+  //   [  7  ]  [  8  ]  [  9  ]
+  //   [ 10  ]  [ 11  ]  [ 12  ]
+  //
+  // Desired mobile order (grouped by column so image→description stay paired):
+  //   Col 1: items 1, 4, 7, 10  →  order: 1
+  //   Col 2: items 2, 5, 8, 11  →  order: 2
+  //   Col 3: items 3, 6, 9, 12  →  order: 3
+  //
+  // nth-of-type counts <div> elements only, correctly skipping the <hr>
+  // clearfix elements that the template inserts after every 3rd widget.
+  //
+  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+1) { order: 1; }
+  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+2) { order: 2; }
+  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+3) { order: 3; }
+
+  // ---- 2-column grids (articles_per_row=2 → each widget is .medium-6) ----
+  //
+  // The DOM already places each image immediately before its paired text, so
+  // no reordering is needed — items simply stack full-width in DOM order.
+  // (No additional rules required beyond the full-width rule above.)
+
+}

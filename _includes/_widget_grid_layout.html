@@ -1,6 +1,6 @@
 {% assign grid_column_size_attribute = 12 | divided_by: include.articles_per_row %}
 
-<div class="row">
+<div class="row widget-grid-row">
   {% for widget in include.widgets %}
     {% assign loopindex = forloop.index | modulo: include.articles_per_row %}
     {% include _frontpage-widget.html widget=widget grid_column_size_attribute=grid_column_size_attribute %}
