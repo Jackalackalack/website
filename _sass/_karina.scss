@@ -53,31 +53,64 @@ p {
     margin-left: 0 !important;
   }
 
-  // ---- 3-column grids (articles_per_row=3 → each widget is .medium-4) ----
-  //
-  // Desktop layout (DOM order 1–12 across 3 columns, 4 rows):
-  //   Col 1    Col 2    Col 3
-  //   [  1  ]  [  2  ]  [  3  ]   ← row 1 (typically images)
-  //   [  4  ]  [  5  ]  [  6  ]   ← row 2 (typically descriptions)
-  //   [  7  ]  [  8  ]  [  9  ]
-  //   [ 10  ]  [ 11  ]  [ 12  ]
-  //
-  // Desired mobile order (grouped by column so image→description stay paired):
-  //   Col 1: items 1, 4, 7, 10  →  order: 1
-  //   Col 2: items 2, 5, 8, 11  →  order: 2
-  //   Col 3: items 3, 6, 9, 12  →  order: 3
-  //
-  // nth-of-type counts <div> elements only, correctly skipping the <hr>
-  // clearfix elements that the template inserts after every 3rd widget.
-  //
-  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+1) { order: 1; }
-  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+2) { order: 2; }
-  .widget-grid-row div.frontpage-widget.medium-4:nth-of-type(3n+3) { order: 3; }
+  // 3-column and 2-column grids: ordering is handled per-page below.
+  // Items with no specific rule stack in DOM order on mobile.
 
-  // ---- 2-column grids (articles_per_row=2 → each widget is .medium-6) ----
+
+  // ---- Projects page: custom mobile ordering (body.page-projects) ----
   //
-  // The DOM already places each image immediately before its paired text, so
-  // no reordering is needed — items simply stack full-width in DOM order.
-  // (No additional rules required beyond the full-width rule above.)
+  // Desired mobile sequence:
+  //   1. "I love teaching..."  (DOM 2)
+  //   2. Guildhall Logo        (DOM 1)
+  //   3. 👆Lecturer            (DOM 4)
+  //   4. waive-UK-2            (DOM 3)
+  //   5. 👆Waive Project       (DOM 6)
+  //   6. westminster logo      (DOM 5)
+  //   7. 👆Visiting Lecturer   (DOM 8)
+  //   8. ICMP Logo             (DOM 7)
+  //   9. 👆Senior tech         (DOM 10)
+  //  10. BIMM LOGO             (DOM 9)
+  //  11. 👆Senior music        (DOM 12)
+  //  12. (empty filler)        (DOM 11) — pushed to end
+  //
+  //
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(1)  { order: 2; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(2)  { order: 1; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(3)  { order: 4; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(4)  { order: 3; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(5)  { order: 6; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(6)  { order: 5; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(7)  { order: 8; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(8)  { order: 7; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(9)  { order: 10; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(10) { order: 9; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(11) { order: 12; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(12) { order: 11; }
+
+
+  // ---- Programming page: custom mobile ordering (body.page-programming) ----
+  //
+  // Desired mobile sequence:
+  //   1. IMG_9414.jpeg                (DOM 7)
+  //   2. "I am an experienced..."     (DOM 2)
+  //   3. 2F8A1596 KansasSmittys       (DOM 5)
+  //   4. "Previous clients..."        (DOM 4)
+  //   5. RA Lates Manhattan Swing     (DOM 3)
+  //   6. "Artists I have programmed"  (DOM 6)
+  //   7. PHOTO-2024-01-13             (DOM 1)
+  //   8. "get in touch"               (DOM 8)
+  //   9. the-good-life-experience     (DOM 9, not listed — kept at end)
+  //  10. (empty)                      (DOM 10)
+  //
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(1)  { order: 1; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(2)  { order: 2; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(3)  { order: 9; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(4)  { order: 4; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(5)  { order: 5; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(6)  { order: 6; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(7)  { order: 7; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(8)  { order: 8; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(9)  { order: 3; }
+  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(10) { order: 10; }
 
 }

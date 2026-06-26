@@ -3,6 +3,7 @@ layout: kz-page
 title: ""
 permalink: "/programming/"
 header: no
+body_class: page-programming
 widgets:
 - url: 
   image: PHOTO-2024-01-13-11-50-37.jpg

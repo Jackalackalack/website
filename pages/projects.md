@@ -3,6 +3,7 @@ layout: kz-page
 title: ""
 permalink: "/projects/"
 header: no
+body_class: page-projects
 widgets:
 - url: 
   image: Guildhall Logo.png
