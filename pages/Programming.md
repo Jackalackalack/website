@@ -16,13 +16,13 @@ widgets:
   title: 
 - url: 
   image:
-  title: Previous clients include 👉 Cheltenham Festivals, Wilderness Festival, Courvoisier, Jim Beam, Apple, Moo Print, Estelle Manor, 5 Hertford Street. 
+  title: Previous clients include: Cheltenham Festivals, Wilderness Festival, Courvoisier, Jim Beam, Apple, Moo Print, Estelle Manor, 5 Hertford Street. 
 - url: 
   image: 2F8A1596 KansasSmittys Goodlife Experience 2018 copy.jpg
   title: 
 - url: 
   image:
-  title: Artists I have programmed include 👇 Shabaka Hutchings, Kansas Smittys, Damian Lewis, Jay Rayner, Bruno Major, Femi Koleoso, Ella Honen.
+  title: Artists I have programmed include: Shabaka Hutchings, Kansas Smittys, Damian Lewis, Jay Rayner, Bruno Major, Femi Koleoso, Ella Honen.
 - url: 
   image: IMG_9414.jpeg
   title: 
