@@ -34,7 +34,24 @@ p {
 // flex container and uses CSS `order` to group items by column position, so
 // every image stays adjacent to its corresponding description on mobile.
 //
+// =====================================================
+// Hide empty widget elements (h2/p rendered with nil
+// values still carry Foundation default margins)
+// =====================================================
+.frontpage-widget h2:empty,
+.frontpage-widget p:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
 @media #{$small-only} {
+
+  // Fix Foundation's forced height: 100% which can make body taller than
+  // its content on mobile, creating blank space below the footer.
+  html, body {
+    height: auto;
+  }
 
   // Turn the widget row into a flex column container
   .widget-grid-row {
