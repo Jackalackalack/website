@@ -36,11 +36,6 @@ p {
 //
 @media #{$small-only} {
 
-  // Hide the footer on mobile — it's disproportionately large on small screens
-  #footer-content {
-    display: none;
-  }
-
   // Turn the widget row into a flex column container
   .widget-grid-row {
     display: flex;
