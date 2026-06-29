@@ -70,16 +70,6 @@ p {
     margin-left: 0 !important;
   }
 
-  // Projects: ICMP sits alone in the centre column on desktop (flanked by
-  // blank spacers at positions 4 and 6). On mobile those spacers are hidden
-  // and widgets stack in content order — Teaching first, then institutions.
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(1) { order: 2; }  // Guildhall
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(2) { order: 1; }  // Teaching → first
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(3) { order: 3; }  // Waive
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(4) { display: none; }  // blank spacer
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(5) { order: 4; }  // ICMP
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(6) { display: none; }  // blank spacer
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(7) { order: 5; }  // Westminster
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(8) { order: 6; }  // BIMM
+  // Both pages: DOM order is the correct mobile order — no overrides needed.
 
 }
