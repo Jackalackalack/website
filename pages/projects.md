@@ -17,14 +17,22 @@ widgets:
   image: waive-UK-2 (1).jpg
   title: Waive Project
   text: UK premiere of new AI tools in 2025 exploring ethical and creative applications of AI for live events and artists. Live event and workshop at The Rich Mix in east London.
-- url: 
-  image: westminster logo.png
-  title: University of Westminster 
-  text: Visiting Lecturer on the Entrepreneurship and Innovation MA. Focus on disruptive technologies and opportunity recognition.
+- url:
+  image:
+  title:
+  text:
 - url: 
   image: ICMP Logo.png
   title: The Institute of Contemporary Music Performance
   text: Senior Lecturer in Technology & Live Events, Fundamentals of Live Production, Touring, Festivals & Logistics
+- url:
+  image:
+  title:
+  text:
+- url: 
+  image: westminster logo.png
+  title: University of Westminster
+  text: Visiting Lecturer on the Entrepreneurship and Innovation MA. Focus on disruptive technologies and opportunity recognition.
 - url: 
   image: BIMM LOGO.png
   title: BIMM

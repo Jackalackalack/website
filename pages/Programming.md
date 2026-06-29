@@ -6,9 +6,13 @@ header: no
 body_class: page-programming
 widgets:
 - url: 
+  image:
+  title: Live Event Programming
+  text: I am an experienced live event programmer and producer. I have curated music and experiences for a wide range of private, corporate and public events for over 20 years.
+- url: 
   image: PHOTO-2024-01-13-11-50-37.jpg
   title: 
-  text: I am an experienced live event programmer and producer. I have curated music and experiences for a wide range of private, corporate and public events for over 20 years.
+  text: 
 - url: 
   image: the-good-life-experience_kansas-smittys_london-jazz-(8) copy.jpg
   title: 
