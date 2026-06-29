@@ -70,64 +70,7 @@ p {
     margin-left: 0 !important;
   }
 
-  // 3-column and 2-column grids: ordering is handled per-page below.
-  // Items with no specific rule stack in DOM order on mobile.
-
-
-  // ---- Projects page: custom mobile ordering (body.page-projects) ----
-  //
-  // Desired mobile sequence:
-  //   1. "I love teaching..."  (DOM 2)
-  //   2. Guildhall Logo        (DOM 1)
-  //   3. 👆Lecturer            (DOM 4)
-  //   4. waive-UK-2            (DOM 3)
-  //   5. 👆Waive Project       (DOM 6)
-  //   6. westminster logo      (DOM 5)
-  //   7. 👆Visiting Lecturer   (DOM 8)
-  //   8. ICMP Logo             (DOM 7)
-  //   9. 👆Senior tech         (DOM 10)
-  //  10. BIMM LOGO             (DOM 9)
-  //  11. 👆Senior music        (DOM 12)
-  //  12. (empty filler)        (DOM 11) — pushed to end
-  //
-  //
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(1)  { order: 2; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(2)  { order: 1; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(3)  { order: 4; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(4)  { order: 3; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(5)  { order: 6; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(6)  { order: 5; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(7)  { order: 8; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(8)  { order: 7; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(9)  { order: 10; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(10) { order: 9; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(11) { order: 12; }
-  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(12) { order: 11; }
-
-
-  // ---- Programming page: custom mobile ordering (body.page-programming) ----
-  //
-  // Desired mobile sequence:
-  //   1. IMG_9414.jpeg                (DOM 7)
-  //   2. "I am an experienced..."     (DOM 2)
-  //   3. 2F8A1596 KansasSmittys       (DOM 5)
-  //   4. "Previous clients..."        (DOM 4)
-  //   5. RA Lates Manhattan Swing     (DOM 3)
-  //   6. "Artists I have programmed"  (DOM 6)
-  //   7. PHOTO-2024-01-13             (DOM 1)
-  //   8. "get in touch"               (DOM 8)
-  //   9. the-good-life-experience     (DOM 9, not listed — kept at end)
-  //  10. (empty)                      (DOM 10)
-  //
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(1)  { order: 1; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(2)  { order: 2; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(3)  { order: 9; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(4)  { order: 4; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(5)  { order: 5; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(6)  { order: 6; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(7)  { order: 7; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(8)  { order: 8; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(9)  { order: 3; }
-  body.page-programming .widget-grid-row div.frontpage-widget:nth-of-type(10) { order: 10; }
+  // Each widget now contains its own image + text, so DOM order is the
+  // correct mobile order on both pages — no per-page overrides needed.
 
 }
