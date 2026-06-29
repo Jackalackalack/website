@@ -70,7 +70,9 @@ p {
     margin-left: 0 !important;
   }
 
-  // Each widget now contains its own image + text, so DOM order is the
-  // correct mobile order on both pages — no per-page overrides needed.
+  // Projects page: show "Teaching and Mentorship" text block first on mobile,
+  // above the Guildhall card. Desktop layout is unaffected.
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(1) { order: 2; }
+  body.page-projects .widget-grid-row div.frontpage-widget:nth-of-type(2) { order: 1; }
 
 }
