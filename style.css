@@ -200,6 +200,7 @@ img { display: block; max-width: 100%; }
   .hero-portrait {
     width: 110px;
     height: 110px;
+    object-fit: cover;
   }
 }
 
