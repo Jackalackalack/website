@@ -1,0 +1,10 @@
+_site
+.bundle
+.DS_Store
+.idea
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+/.byebug_history
+_old-site/
+*.mov
