@@ -101,21 +101,32 @@ document.querySelectorAll('.logo-grid--large').forEach(strip => initCarousel(str
 // --- Mobile: tap once to reveal overlay, tap again to navigate ---
 if ('ontouchstart' in window) {
   document.querySelectorAll('a.img-tile').forEach(tile => {
-    tile.addEventListener('click', e => {
+    let startX, startY;
+
+    tile.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }, { passive: true });
+
+    tile.addEventListener('touchend', e => {
+      const dx = Math.abs(e.changedTouches[0].clientX - startX);
+      const dy = Math.abs(e.changedTouches[0].clientY - startY);
+      if (dx > 10 || dy > 10) return; // was a scroll, not a tap
+
       if (!tile.classList.contains('tapped')) {
         e.preventDefault();
         document.querySelectorAll('a.img-tile.tapped').forEach(t => t.classList.remove('tapped'));
         tile.classList.add('tapped');
       }
-      // second tap: navigate normally
+      // second tap: let browser navigate normally
     });
   });
 
-  document.addEventListener('click', e => {
+  document.addEventListener('touchstart', e => {
     if (!e.target.closest('a.img-tile')) {
       document.querySelectorAll('a.img-tile.tapped').forEach(t => t.classList.remove('tapped'));
     }
-  });
+  }, { passive: true });
 }
 
 
