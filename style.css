@@ -397,6 +397,11 @@ img { display: block; max-width: 100%; }
 .img-tile:hover video        { transform: scale(1.03); }
 .img-tile:hover .img-tile-label { opacity: 1; }
 
+/* Mobile tap-to-reveal overlay */
+.img-tile.tapped img,
+.img-tile.tapped video       { transform: scale(1.03); }
+.img-tile.tapped .img-tile-label { opacity: 1; }
+
 
 /* --- Logo grid -------------------------------------------- */
 .logo-grid {
@@ -452,7 +457,8 @@ img { display: block; max-width: 100%; }
   filter: grayscale(1);
 }
 
-.logo-grid--large .img-tile:hover img {
+.logo-grid--large .img-tile:hover img,
+.logo-grid--large .img-tile.tapped img {
   opacity: 1;
   filter: grayscale(0);
 }

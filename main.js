@@ -98,6 +98,27 @@ document.querySelectorAll('.image-collection').forEach(strip => initCarousel(str
 document.querySelectorAll('.logo-grid--large').forEach(strip => initCarousel(strip, 'a'));
 
 
+// --- Mobile: tap once to reveal overlay, tap again to navigate ---
+if ('ontouchstart' in window) {
+  document.querySelectorAll('a.img-tile').forEach(tile => {
+    tile.addEventListener('click', e => {
+      if (!tile.classList.contains('tapped')) {
+        e.preventDefault();
+        document.querySelectorAll('a.img-tile.tapped').forEach(t => t.classList.remove('tapped'));
+        tile.classList.add('tapped');
+      }
+      // second tap: navigate normally
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('a.img-tile')) {
+      document.querySelectorAll('a.img-tile.tapped').forEach(t => t.classList.remove('tapped'));
+    }
+  });
+}
+
+
 // --- Video: play when visible, pause when not --------------
 document.querySelectorAll('.img-tile video').forEach(video => {
   const videoObserver = new IntersectionObserver(entries => {
