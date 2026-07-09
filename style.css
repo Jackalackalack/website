@@ -124,8 +124,8 @@ img { display: block; max-width: 100%; }
 /* --- Hero ------------------------------------------------- */
 #hero {
   position: relative;
-  height: 100vh;
-  min-height: 500px;
+  height: 44vh;
+  min-height: 400px;
   display: flex;
   align-items: flex-end;
   padding: 0 var(--pad-x) 70px;
