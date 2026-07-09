@@ -200,6 +200,11 @@ img { display: block; max-width: 100%; }
     gap: 1.5rem;
   }
 
+  #hero {
+    height: 100vh;
+    min-height: 500px;
+  }
+
   .hero-portrait {
     width: 110px;
     height: 110px;
