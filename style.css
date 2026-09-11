@@ -340,12 +340,6 @@ img { display: block; max-width: 100%; }
   margin-top: 1.25rem;
 }
 
-/* Lead paragraph — first paragraph in each section body */
-.text-body .section-text:first-child {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  color: var(--color-dark);
-}
 
 .section-text a {
   color: #C55228;
@@ -568,7 +562,7 @@ img { display: block; max-width: 100%; }
   object-fit: cover;
 }
 
-/* Desktop: 4-column grid so tiles always fill the content column */
+/* Desktop: 4-column grid, square tiles */
 @media (min-width: 701px) {
   .logo-grid--large {
     display: grid;
@@ -577,20 +571,30 @@ img { display: block; max-width: 100%; }
 
   .logo-grid--large .img-tile {
     width: 100%;
-    height: 160px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .logo-grid--large .img-tile img,
+  .logo-grid--large .img-tile video {
+    height: 100%;
+  }
+
+  /* Music section tiles — square on desktop */
+  .image-collection .img-tile {
+    aspect-ratio: 1 / 1;
+  }
+
+  .image-collection .img-tile img,
+  .image-collection .img-tile video {
+    height: 100%;
   }
 }
 
-/* Keep grayscale + reveal on hover */
+/* Full colour by default, brighten on hover */
 .logo-grid--large .img-tile img {
-  opacity: 0.7;
-  filter: grayscale(1);
-}
-
-.logo-grid--large .img-tile:hover img,
-.logo-grid--large .img-tile.tapped img {
   opacity: 1;
-  filter: grayscale(0);
+  filter: none;
 }
 
 /* Mobile: logo grid becomes a swipe carousel */
