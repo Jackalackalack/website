@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools — Jack Abraham</title>
+  <meta name="description" content="A suite of no-code tools for music business education and strategy, built by Jack Abraham.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .tools-page {
+      padding-top: calc(var(--nav-height) + 4rem);
+      padding-bottom: 5rem;
+      padding-left: var(--pad-x);
+      padding-right: var(--pad-x);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .tools-intro {
+      margin-bottom: 3.5rem;
+    }
+
+    .tools-intro .section-label {
+      margin-bottom: 0.75rem;
+    }
+
+    .tools-intro h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .tools-intro p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--color-mid);
+      max-width: 640px;
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .tool-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--color-light);
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .tool-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .tool-card img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+
+    .tool-card-body {
+      padding: 1.25rem 1.5rem 1.5rem;
+    }
+
+    .tool-card-label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C55228;
+      margin-bottom: 0.4rem;
+    }
+
+    .tool-card-title {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .tool-card-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--color-mid);
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="../" class="nav-logo">Jack Abraham</a>
+    <button id="burger" class="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="nav-links" class="nav-links" role="list">
+      <li><a href="../#music">Music</a></li>
+      <li><a href="../#education">Education</a></li>
+      <li><a href="../#mentorship">Mentorship</a></li>
+      <li><a href="../blog/">Blog</a></li>
+      <li><a href="./index.html" style="color:#C55228;">AI Tools</a></li>
+      <li><a href="mailto:jack@jackabraham.studio">Contact</a></li>
+      <li class="nav-cta-item"><a href="https://doodle.com/sign-up-sheet/participate/641edea4-6d9a-401f-8bbe-09f9e266767e/select" target="_blank" rel="noopener noreferrer" class="nav-cta">Book a 1-2-1</a></li>
+    </ul>
+  </nav>
+
+  <main class="tools-page">
+
+    <div class="tools-intro fade-up">
+      <span class="section-label">Resources</span>
+      <h1>AI Tools</h1>
+      <p>A suite of no-code tools built as teaching aids and for my own fun. Each one is free to use. I'll be adding more as I make them.</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <a href="https://jackalackalack.github.io/Risk-Wizard/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up">
+        <img src="../images/tool-risk-wizard.jpg" alt="Risk Wizard — Build a risk assessment for your event" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Event Production</span>
+          <h2 class="tool-card-title">Risk Wizard</h2>
+          <p class="tool-card-desc">A guided wizard that walks through your event, captures the essential details, and exports an editable document formatted to the HSE risk assessment template.</p>
+        </div>
+      </a>
+
+      <a href="https://jackalackalack.github.io/Crescendo/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up delay-1">
+        <img src="../images/tool-crescendo.jpg" alt="Crescendo — Music industry research with Harvard citations" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Research</span>
+          <h2 class="tool-card-title">Crescendo</h2>
+          <p class="tool-card-desc">Music industry research, found and cited in Harvard format. Searches 30 curated, trusted publishers and data sources.</p>
+        </div>
+      </a>
+
+      <a href="https://jackalackalack.github.io/future-links/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up delay-2">
+        <img src="../images/tool-future-links.jpg" alt="Future Links — Searchable link library" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Learning</span>
+          <h2 class="tool-card-title">Future Links</h2>
+          <p class="tool-card-desc">A shared, searchable stash of links for the course. Search by keyword or filter by tag.</p>
+        </div>
+      </a>
+
+      <a href="https://jackalackalack.github.io/Music-Performing-Rights-Organisation-Search-Guide/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up delay-3">
+        <img src="../images/tool-pro-guide.jpg" alt="A Global PRO Guide" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Music Business</span>
+          <h2 class="tool-card-title">A Global PRO Guide</h2>
+          <p class="tool-card-desc">Every music performing rights organisation on earth, in one place. Find your PRO, compare societies, and browse the directory.</p>
+        </div>
+      </a>
+
+      <a href="https://jackalackalack.github.io/The-Strategists-Notebook/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up delay-4">
+        <img src="../images/tool-strategy-notebook.jpg" alt="The Strategist's Notebook" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Strategy</span>
+          <h2 class="tool-card-title">The Strategist's Notebook</h2>
+          <p class="tool-card-desc">Before you fill in a template, understand why it works. Builds graphical, editable versions of five strategy tools — SWOT, PESTLE, Porter's Five Forces, Business Model Canvas, and Blue Ocean Strategy.</p>
+        </div>
+      </a>
+
+      <a href="https://jackalackalack.github.io/5v5-football-tactics-board/"
+         target="_blank" rel="noopener noreferrer"
+         class="tool-card fade-up">
+        <img src="../images/tool-tactics-board.jpg" alt="5v5 Tactics Board" loading="lazy">
+        <div class="tool-card-body">
+          <span class="tool-card-label">Coaching</span>
+          <h2 class="tool-card-title">5v5 Tactics Board</h2>
+          <p class="tool-card-desc">Drag markers to position players, capture keyframes, adjust positions, and play back animated sequences. Export as PNG, WebM video, or GIF.</p>
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-social">
+      <a href="mailto:jack@jackabraham.studio" title="Email Jack">✉</a>
+      <a href="https://www.linkedin.com/in/jackcabraham/"
+         target="_blank"
+         rel="noopener noreferrer"
+         title="LinkedIn">in</a>
+    </div>
+    <p>© Copyright 2026 Jack Abraham. All rights reserved. This website does not use cookies.</p>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
