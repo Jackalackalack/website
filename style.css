@@ -529,7 +529,7 @@ img { display: block; max-width: 100%; }
   text-decoration: none;
 }
 
-.logo-grid img {
+.logo-grid:not(.logo-grid--large) img {
   height: 55px;
   width: auto;
   object-fit: contain;
@@ -538,7 +538,7 @@ img { display: block; max-width: 100%; }
   transition: opacity 0.3s, filter 0.3s;
 }
 
-.logo-grid a:hover img {
+.logo-grid:not(.logo-grid--large) a:hover img {
   opacity: 1;
   filter: grayscale(0);
 }
@@ -591,11 +591,6 @@ img { display: block; max-width: 100%; }
   }
 }
 
-/* Full colour by default, brighten on hover */
-.logo-grid--large .img-tile img {
-  opacity: 1;
-  filter: none;
-}
 
 /* Mobile: logo grid becomes a swipe carousel */
 @media (max-width: 700px) {
